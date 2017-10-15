@@ -1,1 +1,1 @@
-# Don't be snooping where you're not supposed to
+# Don't be snooping where you're not supposed to be
