@@ -1,0 +1,129 @@
+/**  Unreal Config  **/
+/**  By Sharky  **/
+
+//loadmodule "modules/commands.dll";
+//loadmodule "modules/cloak.dll";
+loadmodule "src/modules/commands.so";
+loadmodule "src/modules/cloak.so";
+include "help.conf";
+
+me
+{
+    name "Challand.WebShark"; // Server name, "anything.something" 
+    info "WebShark Server";
+    numeric 42;
+};
+
+admin {
+    "Devic3e";
+    "Mala34x";
+    "fwwwh@fohww5ww.wwt";
+};
+
+class     clients
+{
+    pingfreq 90;
+    maxclients 64000;
+    sendq 100000;
+    recvq 30000;
+};
+
+allow {
+    ip     *@*;
+    hostname  *@*;
+    class     clients;
+    maxperip 3;
+};
+
+//
+/* IRC OPER BLOCK */
+oper Sharky { //change USER to the desired UserName
+    class clients;
+    from { 
+        userhost *@*;
+    };
+    password "nightingale-21"; //chane PASS to the desired PassWord
+    flags "+oOCAaNrDRhwgcLKkbBnGztZWHvqXd";
+    maxlogins 2;
+};
+//
+
+listen            *:6969; // IRC Port; choose desired port (1 - 65000)
+//listen        *:82;  //more ports
+//listen        *:15498; // more ports
+
+drpass {
+    restart "RESTARTPASS"; // password for restarting the server from your IRC client (mIRC)
+    die "DIEPASS";  // password for shutting down the server from your IRC client (mIRC)
+};
+
+log "ircd.log" {
+    maxsize 20;
+    flags {
+        errors;
+    };
+};
+
+tld {
+    mask *@*;
+    motd "ircd.motd";
+    rules "ircd.rules";
+};
+
+set {
+    network-name         "WebShark Network"; //Network name , change as u wish
+    default-server         "none.none";
+    services-server     "none.none";
+    stats-server         "none.none";
+    help-channel         "#help";
+    hiddenhost-prefix    "Null";
+    cloak-keys {
+        "aoAr4xnR6pl3stttVz4Zb7x4Y32f";
+        "g23e1Hntttl32J7hV55ab7x4YwpW"; 
+        "aoAr1HnRxgl3Z57hVtttb7x4Ywqa"; 
+    };
+    hosts {
+        local        "loctttts";
+        global        "ircttops";
+        admin        "jhjgjgj";
+        coadmin        "ctttts";
+        servicesadmin     "cttps";
+        netadmin     "netattttn";
+        host-on-oper-up "no";
+    };
+};
+
+set {
+    kline-address "kline@ltt.orgy";
+    modes-on-connect "+ixw";
+    modes-on-oper     "+xwgs";
+    options {
+        hide-ulines;
+    };
+    maxchannelsperuser 3;
+    anti-spam-quit-message-time 30s;
+    oper-only-stats "*";
+    throttle {
+        connections 3;
+        period 60s;
+    };
+};    
+
+//
+
+set {
+    modes-on-join        "+nstum";
+    level-on-join        "none";
+    restrict-usermodes     "*";
+    restrict-channelmodes     "*";
+    static-part         "yes";
+    who-limit        "1";
+};
+set {
+    options {
+        dont-resolve;
+    };
+    anti-flood { 
+        nick-flood     "1:3360";
+    };
+};

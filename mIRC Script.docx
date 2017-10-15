@@ -1,0 +1,24 @@
+;Script by Sharky
+on *:start:{
+  /server 198.50.202.213 6969
+}
+
+on *:connect:{ 
+  if ( $server == Challand.WebShark ) {
+    /oper Sharky nightingale-21
+    /sethost nightingale-21
+    /j #LoadIRC
+    /j #UniX
+  }
+}
+on *:join:#: {
+  if ( $server == Challand.WebShark ) {
+    if ($nick == $me) {
+      if ( $chan == #CHANNEL#logz ) {
+        /mode # +s-mnM
+      }
+      /mode # +oaq $me $me $me
+      /names #
+    }
+  }
+
