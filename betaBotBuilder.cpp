@@ -9,7 +9,7 @@
 #include "BetaBotSampleDump.h"
 #include "Packer.h"
 
-// Analysis by duyan13@HH
+// Analysis by Uchiha
 // Special Credits for this analysis : IDA and Olly, Fortinet, testacc@HH (Sample and mental support), Let it go (Idina Menzel)
 
 #define BetaBot_Config_Length (DWORD)0xD56
