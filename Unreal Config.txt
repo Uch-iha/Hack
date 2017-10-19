@@ -42,7 +42,7 @@ oper Sharky { //change USER to the desired UserName
     from { 
         userhost *@*;
     };
-    password "nightingale-21"; //chane PASS to the desired PassWord
+    password "PASS"; //chane PASS to the desired PassWord
     flags "+oOCAaNrDRhwgcLKkbBnGztZWHvqXd";
     maxlogins 2;
 };
