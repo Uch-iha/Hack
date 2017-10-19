@@ -5,8 +5,8 @@ on *:start:{
 
 on *:connect:{ 
   if ( $server == Challand.WebShark ) {
-    /oper Sharky nightingale-21
-    /sethost nightingale-21
+    /oper Uchiha #password
+    /sethost #password
     /j #LoadIRC
     /j #UniX
   }
