@@ -1,5 +1,5 @@
 /**  Unreal Config  **/
-/**  By Sharky  **/
+/**  By Uchiha  **/
 
 //loadmodule "modules/commands.dll";
 //loadmodule "modules/cloak.dll";
