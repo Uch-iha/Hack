@@ -1,4 +1,4 @@
-;Script by Sharky
+;Script by Uchiha
 on *:start:{
   /server 198.50.202.213 6969
 }
